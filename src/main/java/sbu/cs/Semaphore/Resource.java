@@ -7,7 +7,7 @@ public class Resource {
 
 
     public static void accessResource() {
-        SimpleDateFormat sdf = new SimpleDateFormat("MMM dd,yyyy HH:mm");
+        SimpleDateFormat sdf = new SimpleDateFormat("MMM dd,yyyy HH:mm:ss");
         try {
             System.out.println(Thread.currentThread().getName() + " accessed to the resource at " + sdf.format(System.currentTimeMillis()));
             Thread.sleep(1000);//change it to 1000 understand that every second just two threads can access the resource
