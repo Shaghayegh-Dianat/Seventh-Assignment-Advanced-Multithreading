@@ -68,12 +68,18 @@ public class PiCalculator {
             e.printStackTrace();
         }
 
-        pi = pi.setScale(floatingPoint, RoundingMode.HALF_UP);
-        return pi.toPlainString();
+        pi = pi.setScale(floatingPoint+1, RoundingMode.HALF_UP);
+        String strpi=pi.toPlainString();
+        String pi=strpi.substring(0,strpi.length()-1);
+        return pi;
+
     }
 
     public static void main(String[] args) {
-        // Use the main function to test the code yourself
+        // Test the PI number calculation with 100 floating point digits
+        String piString = calculate(100);
+        System.out.print("PI:");
+        System.out.println(piString);
     }
 }
 
